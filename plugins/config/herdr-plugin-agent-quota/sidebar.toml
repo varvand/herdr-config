@@ -1,0 +1,23 @@
+# Agent Quota — display settings for the sidebar tokens, status bar,
+# and `--oneline` tab bar output. Edited values apply on the next draw or
+# refresh tick (within a minute); no restart needed.
+
+# What the percentages and gauges show:
+#   "used"      — consumed share of each quota window (gauges fill as you spend)
+#   "remaining" — what is left (gauges drain as you spend)
+# Severity colors always track consumption: <50% ok, <80% warn, >=80% bad.
+display = "used"
+
+# Show the model an omp pane is currently running (read from its session
+# log) after the usage row, and route that pane's quota to the model's
+# vendor instead of the static kindMap entry.
+showModel = true
+
+# Which vendor's quota an agent kind displays in the sidebar.
+# Keys are Herdr agent kinds (see `herdr agent list`); values are
+# "claude", "codex", or "grok". Kinds without a mapping show nothing.
+[kindMap]
+claude = "claude"
+codex = "codex"
+grok = "grok"
+omp = "claude"

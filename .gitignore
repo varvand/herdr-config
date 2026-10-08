@@ -1,0 +1,19 @@
+# Runtime and Herdr-managed state. The config repo tracks only hand-written files.
+__pycache__/
+*.pyc
+*.log
+*.sock
+herdr.sock.agent
+.plugins.lock
+plugins.json
+session.json
+session-snapshots/
+
+# Third-party checkouts and per-plugin runtime.
+plugins/github/
+plugins/state/
+
+# Self-developed plugins live in their own repositories.
+plugins/agent-spinner/
+plugins/mac-notify/
+plugins/quota-sidebar/

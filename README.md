@@ -24,6 +24,7 @@ Prefix is Herdr's default, Ctrl-b.
 | prefix+f | File viewer in a split |
 | prefix+shift+f | File viewer in a tab |
 | prefix+u | Agent usage pane. Press again to close it. `q` or Esc closes it from inside |
+| prefix+a | Spawn agents. `claude 3` opens three Claude panes in a new tab |
 
 ## Plugins
 
@@ -48,13 +49,16 @@ Local plugins are separate repositories, linked from this config directory:
 ```bash
 git clone https://github.com/varvand/herdr-plugin-agent-spinner.git ~/.config/herdr/plugins/agent-spinner
 git clone https://github.com/varvand/herdr-plugin-mac-notify.git ~/.config/herdr/plugins/mac-notify
+git clone https://github.com/varvand/herdr-plugin-agent-spawn.git ~/.config/herdr/plugins/agent-spawn
 herdr plugin link ~/.config/herdr/plugins/agent-spinner --enabled
 herdr plugin link ~/.config/herdr/plugins/mac-notify --enabled
+herdr plugin link ~/.config/herdr/plugins/agent-spawn --enabled
 ```
 
 | Repo | Plugin id | Role |
 | --- | --- | --- |
 | [herdr-plugin-agent-spinner](https://github.com/varvand/herdr-plugin-agent-spinner) | `local.agent-spinner` | `$spin` on working agent rows |
+| [herdr-plugin-agent-spawn](https://github.com/varvand/herdr-plugin-agent-spawn) | `local.agent-spawn` | `prefix+a` opens several agent panes from one prompt |
 | [herdr-plugin-mac-notify](https://github.com/varvand/herdr-plugin-mac-notify) | `local.mac-notify` | Notification Center when an agent finishes or needs input |
 | [herdr-plugin-quota-sidebar](https://github.com/varvand/herdr-plugin-quota-sidebar) | `local.quota-sidebar` | Optional. Quota lines on the last agent card. Not linked here |
 

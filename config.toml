@@ -97,3 +97,10 @@ key = "prefix+u"
 type = "plugin_action"
 command = "herdr-plugin-agent-quota.statusbar"
 description = "toggle agent usage"
+
+# Small prompt, same idea as the keybind panel. "claude 3" opens three panes.
+[[keys.command]]
+key = "prefix+a"
+type = "plugin_action"
+command = "local.agent-spawn.open"
+description = "spawn agents"

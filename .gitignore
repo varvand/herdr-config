@@ -17,3 +17,4 @@ plugins/state/
 plugins/agent-spinner/
 plugins/mac-notify/
 plugins/quota-sidebar/
+plugins/agent-spawn/

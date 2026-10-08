@@ -64,6 +64,24 @@ herdr plugin link ~/.config/herdr/plugins/agent-spawn --enabled
 
 In-app toasts stay on (`ui.toast.delivery = "herdr"`). The Mac banners are the notify plugin, not `delivery = "system"`.
 
+## Screenshots
+
+![Spinner on working agent rows](docs/spinner.gif)
+
+`local.agent-spinner` draws the amber cell only while that agent is working.
+
+![Spawn popup for claude 3](docs/spawn.png)
+
+`prefix+a` opens this popup. `claude 3` starts three Claude panes in a new tab.
+
+![Notification Center banner](docs/notify.png)
+
+`local.mac-notify` posts this banner when an agent finishes or needs input. `osascript` attributes it to Script Editor.
+
+![Quota lines on the last agent card](docs/quota.png)
+
+`local.quota-sidebar` can draw these lines on the last agent card. It is not linked in this config. `prefix+u` opens the quota plugin's bottom pane instead.
+
 ## Restore
 
 ```bash
